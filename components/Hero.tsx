@@ -11,7 +11,7 @@ export default function Hero() {
         </h1>
         
         <p className="text-lg text-slate-400">
-          Your trusted partner for [Product/Service Name]. Serving the community with integrity and dedication since [Year].
+          Your trusted partner for Organic Fertillizers. Serving the community with integrity and dedication since 2001.
         </p>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
