@@ -65,7 +65,7 @@ export default function Navbar() {
               variant="secondary"
               className="w-full justify-center"
             >
-              Login
+              Contact
             </NavbarButton>
             <NavbarButton
               onClick={() => setIsMobileMenuOpen(false)}
