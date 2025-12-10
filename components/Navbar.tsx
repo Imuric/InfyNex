@@ -1,29 +1,82 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+"use client";
+import {
+  Navbar as NavRoot,
+  NavBody,
+  NavItems,
+  MobileNav,
+  NavbarLogo,
+  NavbarButton,
+  MobileNavHeader,
+  MobileNavToggle,
+  MobileNavMenu,
+} from "@/components/ui/resizable-navbar";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    { name: "Services", link: "#services" },
+    { name: "Products", link: "#products" },
+    { name: "About", link: "#about" },
+  ];
+
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        {/* Logo / Brand Name */}
-        <div className="text-xl font-bold text-slate-900">
-          Shambala Enterprises
+    // Note: We don't need the outer div "relative w-full" here because 
+    // the NavRoot is already fixed/sticky.
+    <NavRoot>
+      {/* Desktop Navigation */}
+      <NavBody>
+        <NavbarLogo />
+        <NavItems items={navItems} />
+        <div className="hidden items-center gap-4 md:flex">
+          <NavbarButton variant="secondary">Contact</NavbarButton>
+          <NavbarButton variant="primary">Get Quote</NavbarButton>
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
-          <Link href="#about" className="text-sm font-medium text-slate-600 hover:text-blue-600">
-            About
-          </Link>
-          <Link href="#services" className="text-sm font-medium text-slate-600 hover:text-blue-600">
-            Services
-          </Link>
-          <Link href="#contact" className="text-sm font-medium text-slate-600 hover:text-blue-600">
-            Contact
-          </Link>
-          <Button>Get a Quote</Button>
+        {/* Mobile Toggle (Hidden on Desktop) */}
+        <div className="md:hidden">
+            <MobileNavToggle
+              isOpen={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
         </div>
-      </div>
-    </nav>
+      </NavBody>
+
+      {/* Mobile Navigation Menu */}
+      <MobileNav>
+        <MobileNavMenu
+          isOpen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
+        >
+          {navItems.map((item, idx) => (
+            <a
+              key={`mobile-link-${idx}`}
+              href={item.link}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="relative text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+            >
+              <span className="block p-2">{item.name}</span>
+            </a>
+          ))}
+          <div className="flex w-full flex-col gap-2 pt-2">
+            <NavbarButton
+              onClick={() => setIsMobileMenuOpen(false)}
+              variant="secondary"
+              className="w-full justify-center"
+            >
+              Login
+            </NavbarButton>
+            <NavbarButton
+              onClick={() => setIsMobileMenuOpen(false)}
+              variant="primary"
+              className="w-full justify-center"
+            >
+              Get Quote
+            </NavbarButton>
+          </div>
+        </MobileNavMenu>
+      </MobileNav>
+    </NavRoot>
   );
 }

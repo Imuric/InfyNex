@@ -1,28 +1,38 @@
+import React from "react";
+import Spotlight from "@/components/ui/Spotlight";
+
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[600px] flex-col items-center justify-center bg-slate-950 px-4 text-center">
-      {/* Background Pattern (Optional) */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+    <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-dot-white/[0.2] relative overflow-hidden">
       
-      <div className="relative z-10 max-w-3xl space-y-6">
-        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
-          Building Trust Through <br />
-          <span className="text-blue-500">Excellence & Quality</span>
-        </h1>
-        
-        <p className="text-lg text-slate-400">
-          Your trusted partner for Organic Fertillizers. Serving the community with integrity and dedication since 2001.
-        </p>
+      {/* THE TWEAK: 
+         Changed 'md:left-60' to 'md:left-80' 
+         This pushes the light source 5rem (80px) to the right.
+      */}
+      <Spotlight
+        className="-top-40 left-0 md:left-[36rem] md:-top-20"
+        fill="white"
+      />
+      
+      {/* The Mask */}
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <button className="h-11 rounded-md bg-blue-600 px-8 text-sm font-medium text-white hover:bg-blue-700">
-            View Products
-          </button>
-          <button className="h-11 rounded-md border border-slate-700 bg-transparent px-8 text-sm font-medium text-white hover:bg-slate-800">
-            Contact Us
-          </button>
+      {/* The Content */}
+      <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0 text-center">
+        <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          Building the Future of <br /> Crypticonic Power
+        </h1>
+        <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg mx-auto">
+          We combine legacy expertise with modern innovation to deliver trusted solutions since [Year]. 
+          Experience quality that speaks for itself.
+        </p>
+        
+        <div className="mt-8 flex justify-center gap-4">
+             <button className="bg-white text-black rounded-full px-8 py-3 font-bold hover:bg-neutral-200 transition">
+                Get Started
+             </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
