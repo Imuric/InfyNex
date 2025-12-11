@@ -3,7 +3,7 @@ import { Spotlight } from "@/components/ui/Spotlight";
 
 export default function Hero() {
   return (
-    <div className="h-[80vh] w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-dot-white/[0.2] relative overflow-hidden">
+    <div className="h-[65vh] w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-dot-white/[0.2] relative overflow-hidden">
       
       {/* 1. The Spotlight Effect */}
       <Spotlight
@@ -26,7 +26,7 @@ export default function Hero() {
         
         <div className="mt-8 flex justify-center gap-4">
              <button className="bg-white text-black rounded-full px-8 py-3 font-bold hover:bg-neutral-200 transition">
-               Get Started
+               Get Quote
              </button>
              <button className="text-white border border-neutral-600 rounded-full px-8 py-3 font-bold hover:bg-neutral-900 transition">
                Contact Sales

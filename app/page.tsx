@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FeaturesSectionDemo from "@/components/FeaturesSectionDemo"; 
-import Footer from "@/components/Footer"; // <--- This now contains everything
+import { GlowingEffectDemo } from "@/components/glowing-effect-demo";
+import Footer from "@/components/Footer"; 
+
 
 export default function Home() {
   return (
@@ -9,6 +11,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <FeaturesSectionDemo />
+      <GlowingEffectDemo />
       <Footer />
       
     </main>

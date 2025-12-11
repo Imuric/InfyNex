@@ -41,7 +41,9 @@ export default function FeaturesSectionDemo() {
         },
     ];
     return (
-        <div className="relative z-20 py-10 lg:py-2 max-w-7xl mx-auto">      
+        // CHANGED: Replaced 'py-10 lg:py-16' with 'pt-0 pb-10 lg:pb-16'
+        // This removes the top padding completely while keeping the bottom spacing.
+        <div className="relative z-20 pt-0 pb-10 lg:pb-16 max-w-7xl mx-auto">      
             <div className="px-8">
             <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
                 Packed with thousands of features
@@ -68,6 +70,7 @@ export default function FeaturesSectionDemo() {
     );
 }
 
+// ... (Rest of the file remains the same: FeatureCard, FeatureTitle, Skeletons, etc.)
 const FeatureCard = ({
     children,
     className,

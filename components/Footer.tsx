@@ -5,14 +5,14 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "luc
 
 export default function Footer() {
   return (
-    // CHANGED: min-h-screen -> min-h-[40rem] (Compact height)
-    <div className="relative w-full min-h-[40rem] bg-neutral-950 flex flex-col items-center justify-between overflow-hidden rounded-md antialiased">
+    // CHANGE 1: Removed 'rounded-md' so it connects fully to the section above.
+    // CHANGE 2: Changed bg to a gradient (from-black to-neutral-950) so the top edge is pure black, matching your Features section perfectly.
+    // CHANGE 3: Added 'pt-20' to push the content down slightly inside the seamless container.
+    <div className="relative w-full min-h-[40rem] bg-gradient-to-b from-black to-neutral-950 pt-20 flex flex-col items-center justify-between overflow-hidden antialiased">
       
       {/* --- SECTION 1: The CTA --- */}
-      {/* CHANGED: Reduced margins to mt-10 mb-10 to shrink the section vertically */}
-      <div className="flex flex-col items-center justify-center flex-grow p-4 relative z-10 text-center mt-10 mb-10">
+      <div className="flex flex-col items-center justify-center flex-grow p-4 relative z-10 text-center mb-10">
         
-        {/* KEPT: Text size remains large (text-7xl) */}
         <h2 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
           Have a Project in mind?
         </h2>
