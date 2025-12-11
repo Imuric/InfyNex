@@ -6,7 +6,7 @@ type SpotlightProps = {
   fill?: string;
 };
 
-export default function Spotlight({ className, fill }: SpotlightProps) {
+export const Spotlight = ({ className, fill }: SpotlightProps) => {
   return (
     <svg
       className={cn(
@@ -17,7 +17,7 @@ export default function Spotlight({ className, fill }: SpotlightProps) {
       viewBox="0 0 3787 2842"
       fill="none"
     >
-      <g filter="url(#filter)">
+      <g filter="url(#filter0_f_2951_32465)">
         <ellipse
           cx="1924.71"
           cy="273.501"
@@ -26,11 +26,11 @@ export default function Spotlight({ className, fill }: SpotlightProps) {
           transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
           fill={fill || "white"}
           fillOpacity="0.21"
-        />
+        ></ellipse>
       </g>
       <defs>
         <filter
-          id="filter"
+          id="filter0_f_2951_32465"
           x="0.860352"
           y="0.838989"
           width="3785.16"
@@ -38,19 +38,19 @@ export default function Spotlight({ className, fill }: SpotlightProps) {
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
-          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
           <feBlend
             mode="normal"
             in="SourceGraphic"
             in2="BackgroundImageFix"
             result="shape"
-          />
+          ></feBlend>
           <feGaussianBlur
             stdDeviation="151"
-            result="effect1_foregroundBlur_1065_8"
-          />
+            result="effect1_foregroundBlur_2951_32465"
+          ></feGaussianBlur>
         </filter>
       </defs>
     </svg>
   );
-}
+};

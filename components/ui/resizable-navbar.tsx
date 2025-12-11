@@ -114,7 +114,7 @@ export const NavbarLogo = ({ className }: { className?: string }) => {
     <Link href="/" className={cn("flex items-center gap-2", className)}>
       <div className="h-6 w-6 rounded-md bg-black dark:bg-white" />
       <span className="text-lg font-bold text-neutral-900 dark:text-white">
-        Shambala
+        InfyNex
       </span>
     </Link>
   );
