@@ -132,7 +132,7 @@ export const SkeletonOne = () => {
 export const SkeletonThree = () => {
     return (
         <a
-            href="https://www.youtube.com/watch?v=RPa3_AD1_Vs"
+            href="https://www.youtube.com/watch?v=1XOJFuKHCck&list=RD1XOJFuKHCck&start_radio=1"
             target="__blank"
             className="relative flex gap-10  h-full group/image"
         >
