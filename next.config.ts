@@ -13,7 +13,7 @@ module.exports = {
         has: [
           {
             type: 'host',
-            value: 'mail.yourdomain.com',
+            value: 'mail.infynex.org',
           },
         ],
         destination: 'https://mail.hostinger.com/v2',
