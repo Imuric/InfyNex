@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "InfyNex Electric Industries",
-  description: "Building the Future",
+  description: "Building the Future of Electrical Solutions and Manufacturing",
 };
 
 export default function RootLayout({

@@ -15,32 +15,32 @@ export function GlowingEffectDemo() {
           <GridItem
             area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
             icon={<Box className="h-4 w-4 text-white" />}
-            title="Do things the right way"
-            description="Running out of copy so I'll write anything."
+            title="MSEB Electrical Work"
+            description="Expertise in industrial electrical solutions and execution of MSEB-related projects with high standards."
           />
           <GridItem
             area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
             icon={<Settings className="h-4 w-4 text-white" />}
-            title="The best AI code editor ever."
-            description="Yes, it's true. I'm not even kidding. Ask my mom if you don't believe me."
+            title="Sourcing & Procurement"
+            description="Comprehensive supplier development and procurement of electrical components globally."
           />
           <GridItem
             area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
             icon={<Lock className="h-4 w-4 text-white" />}
-            title="You should buy Aceternity UI Pro"
-            description="It's the best money you'll ever spend"
+            title="Lighting Import"
+            description="Sourcing high-quality decorative lighting, chandeliers, and fixtures for diverse industrial and commercial needs."
           />
           <GridItem
             area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
             icon={<Sparkles className="h-4 w-4 text-white" />}
-            title="This card is also built by Cursor"
-            description="I'm not even kidding. Ask my mom if you don't believe me."
+            title="Manufacturing Excellence"
+            description="Led by Vaibhav Nevase (Founder) and Prathamesh Patil (Project Lead, Manufacturing)."
           />
           <GridItem
             area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
             icon={<Search className="h-4 w-4 text-white" />}
-            title="Coming soon on Aceternity UI"
-            description="I'm writing the code as I record this, no shit."
+            title="Future Expansion"
+            description="Expanding into India-based manufacturing of electrical insulators and exploring rubber injection molding machinery."
           />
         </ul>
       </div>

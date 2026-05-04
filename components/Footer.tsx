@@ -18,7 +18,7 @@ export default function Footer() {
         </h2>
         
         <p className="text-neutral-400 max-w-lg mx-auto my-4 text-sm md:text-base">
-          Whether you need a complete electrical overhaul or a custom solution, 
+          Whether you need a complete electrical overhaul, lighting sourcing, or a custom industrial solution, 
           we are ready to bring your vision to light.
         </p>
         <button className="mt-4 bg-white text-black rounded-full px-8 py-3 font-bold hover:bg-neutral-200 transition shadow-[0_0_20px_rgba(255,255,255,0.3)]">
@@ -42,17 +42,17 @@ export default function Footer() {
                 <span>InfyNex</span>
               </div>
               <p className="text-neutral-400 mt-2">
-                Powering the future with sustainable and reliable electrical engineering.
+                Powering the future with trusted electrical solutions, global sourcing, and advanced manufacturing.
               </p>
               <div className="flex flex-col gap-2 text-neutral-400 mt-2">
                  <div className="flex items-center gap-2">
-                    <MapPin size={16} /> <span>123 Innovation Dr, Tech City</span>
+                    <MapPin size={16} className="min-w-4" /> <span>2912, Flat No. 1001, Dattai Niwas, Sangarsh Colony, Shirwal, Satara, Maharashtra – 412801, India</span>
                  </div>
                  <div className="flex items-center gap-2">
-                    <Mail size={16} /> <span>hello@infynex.com</span>
+                    <Mail size={16} className="min-w-4" /> <span>hello@infynex.com</span>
                  </div>
                  <div className="flex items-center gap-2">
-                    <Phone size={16} /> <span>+1 (555) 123-4567</span>
+                    <Phone size={16} className="min-w-4" /> <span>+91 00000 00000</span>
                  </div>
               </div>
               <div className="flex gap-4 mt-2">
@@ -99,7 +99,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center border-t border-neutral-800 pt-8 text-neutral-500 text-xs">
-            <p>© 2025 InfyNex Inc. All rights reserved.</p>
+            <p>© 2026 InfyNex Electric Industries. All rights reserved.</p>
             <p>Designed for the future.</p>
           </div>
 

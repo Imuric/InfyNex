@@ -10,7 +10,7 @@ export function CallToAction() {
           Ready to get started?
         </h2>
         <p className="text-neutral-400 max-w-lg mx-auto my-4 text-sm md:text-base">
-          Join us today and experience the future of electrical solutions. 
+          Join us today and experience the future of electrical and industrial solutions. 
           Let's build something great together.
         </p>
         <button className="mt-4 bg-white text-black rounded-full px-8 py-3 font-bold hover:bg-neutral-200 transition">

@@ -10,32 +10,32 @@ import Image from "next/image";
 export default function FeaturesSectionDemo() {
     const features = [
         {
-            title: "Track issues effectively",
+            title: "Industrial Electrical Solutions",
             description:
-                "Track and manage your project issues with ease using our intuitive interface.",
+                "Trusted execution of MSEB-related electrical work and comprehensive industrial power solutions.",
             skeleton: <SkeletonOne />,
             className:
                 "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
         },
         {
-            title: "Capture pictures with AI",
+            title: "Lighting Import & Sourcing",
             description:
-                "Capture stunning photos effortlessly using our advanced AI technology.",
+                "Sourcing high-quality decorative lighting, chandeliers, and fixtures from global markets.",
             skeleton: <SkeletonTwo />,
             className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
         },
         {
-            title: "Watch our AI on YouTube",
+            title: "Supplier Development",
             description:
-                "Whether its you or Tyler Durden, you can get to know about our product on YouTube",
+                "Strategic procurement and supplier development to ensure robust supply chains for electrical components.",
             skeleton: <SkeletonThree />,
             className:
                 "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
         },
         {
-            title: "Deploy in seconds",
+            title: "Future Manufacturing",
             description:
-                "With our blazing fast, state of the art, cutting edge cloud services (read AWS) - you can deploy your model in seconds.",
+                "Expanding into India-based manufacturing of electrical insulators and exploring rubber injection molding machinery.",
             skeleton: <SkeletonFour />,
             className: "col-span-1 lg:col-span-3 border-b lg:border-none",
         },
@@ -46,12 +46,11 @@ export default function FeaturesSectionDemo() {
         <div className="relative z-20 pt-0 pb-10 lg:pb-16 max-w-7xl mx-auto">      
             <div className="px-8">
             <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
-                Packed with thousands of features
+                Comprehensive Electrical & Sourcing Capabilities
             </h4>
 
             <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-                From Image generation to video generation, Everything AI has APIs for
-                literally everything. It can even create this website copy for you.
+                From industrial electrical installations to global lighting sourcing and future manufacturing setups, InfyNex delivers robust solutions for complex power and supply chain needs.
             </p>
         </div>
 

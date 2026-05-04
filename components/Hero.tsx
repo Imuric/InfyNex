@@ -17,11 +17,10 @@ export default function Hero() {
       {/* 3. Content - Wide and Spacious */}
       <div className="p-4 max-w-5xl mx-auto relative z-10 w-full text-center pt-20 md:pt-0">
         <h1 className="text-4xl md:text-7xl font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          Building the Future of <br /> Electrical Solutions
+          Building the Future of <br /> Electrical & Industrial Solutions
         </h1>
         <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg mx-auto">
-          We combine legacy expertise with modern innovation to deliver trusted solutions. 
-          Join us in powering a brighter tomorrow.
+          We combine legacy MSEB expertise with modern innovation to deliver trusted industrial electrical solutions, lighting sourcing, and future manufacturing.
         </p>
         
         <div className="mt-8 flex justify-center gap-4">
