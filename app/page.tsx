@@ -47,7 +47,7 @@ export default function ComingSoon() {
         </h2>
 
         <p className="text-neutral-400 max-w-lg text-sm md:text-base leading-relaxed mb-8">
-          InfyNex Industrial Solutions is upgrading its digital infrastructure.
+          InfyNex Electric Industries is upgrading its digital infrastructure.
           We are building a robust platform to serve you better. Full access
           will be restored shortly.
         </p>

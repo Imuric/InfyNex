@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "InfyNex Industrial Solutions",
+  title: "InfyNex Electric Industries",
   description: "Building the Future",
 };
 
