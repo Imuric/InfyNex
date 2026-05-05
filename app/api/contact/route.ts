@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     const { data, error } = await resend.emails.send({
       from: 'InfyNex <noreply@infynex.org>',
       // Fallback test email added for debugging per instructions
-      to: ['contact@infynex.org', 'prathameshpatil3221@gmail.com'],
+      to: ['contact@infynex.org', 'vaibhavnevase7700@gmail.com'],
       replyTo: email,
       subject: 'New Contact Form Submission – InfyNex',
       html: `
