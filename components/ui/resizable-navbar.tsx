@@ -9,6 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 /* -------------------------------------------------------------------------- */
 /* CONTEXT (To share state between components)                                */
@@ -111,11 +112,15 @@ export const NavItems = ({
 
 export const NavbarLogo = ({ className }: { className?: string }) => {
   return (
-    <Link href="/" className={cn("flex items-center gap-2", className)}>
-      <div className="h-6 w-6 rounded-md bg-black dark:bg-white" />
-      <span className="text-lg font-bold text-neutral-900 dark:text-white">
-        InfyNex
-      </span>
+    <Link href="/" className={cn("flex items-center", className)}>
+      <Image
+        src="/logo.svg"
+        alt="InfyNex Logo"
+        width={140}
+        height={40}
+        className="h-7 w-auto"
+        priority
+      />
     </Link>
   );
 };

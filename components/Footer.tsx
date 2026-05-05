@@ -3,6 +3,7 @@ import React from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -38,12 +39,15 @@ export default function Footer() {
             
             {/* COLUMN 1: Logo, Socials, Contact */}
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-2 font-bold text-xl text-white">
-                <div className="h-8 w-8 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-black text-xs">⚡</span>
-                </div>
-                <span>InfyNex</span>
-              </div>
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/logo.svg"
+                  alt="InfyNex Logo"
+                  width={140}
+                  height={40}
+                  className="h-10 w-auto"
+                />
+              </Link>
               <p className="text-neutral-400 mt-2">
                 Powering the future with trusted electrical solutions, global sourcing, and advanced manufacturing.
               </p>
