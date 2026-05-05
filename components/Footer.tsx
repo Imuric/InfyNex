@@ -2,6 +2,7 @@
 import React from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -21,9 +22,11 @@ export default function Footer() {
           Whether you need a complete electrical overhaul, lighting sourcing, or a custom industrial solution, 
           we are ready to bring your vision to light.
         </p>
-        <button className="mt-4 bg-white text-black rounded-full px-8 py-3 font-bold hover:bg-neutral-200 transition shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-            Get in Touch
-        </button>
+        <Link href="/contact">
+          <button className="mt-4 bg-white text-black rounded-full px-8 py-3 font-bold hover:bg-neutral-200 transition shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+              Get in Touch
+          </button>
+        </Link>
       </div>
 
 
@@ -48,12 +51,12 @@ export default function Footer() {
                  <div className="flex items-center gap-2">
                     <MapPin size={16} className="min-w-4" /> <span>2912, Flat No. 1001, Dattai Niwas, Sangarsh Colony, Shirwal, Satara, Maharashtra – 412801, India</span>
                  </div>
-                 <div className="flex items-center gap-2">
-                    <Mail size={16} className="min-w-4" /> <span>hello@infynex.com</span>
-                 </div>
-                 <div className="flex items-center gap-2">
-                    <Phone size={16} className="min-w-4" /> <span>+91 00000 00000</span>
-                 </div>
+                  <div className="flex items-center gap-2">
+                    <Mail size={16} className="min-w-4" /> <span>contact@infynex.org</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone size={16} className="min-w-4" /> <span>+91 73784 77700</span>
+                  </div>
               </div>
               <div className="flex gap-4 mt-2">
                 <a href="#" className="text-neutral-400 hover:text-white transition"><Twitter size={20} /></a>
@@ -67,11 +70,11 @@ export default function Footer() {
             <div>
               <h3 className="font-bold text-white mb-6 text-lg">Company</h3>
               <ul className="space-y-4 text-neutral-400">
-                <li><a href="#" className="hover:text-white transition">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition">Services</a></li>
-                <li><a href="#" className="hover:text-white transition">Projects</a></li>
-                <li><a href="#" className="hover:text-white transition">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition">Contact</a></li>
+                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-white transition">Services</Link></li>
+                <li><Link href="/projects" className="hover:text-white transition">Projects</Link></li>
+                <li><Link href="/careers" className="hover:text-white transition">Careers</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
               </ul>
             </div>
 

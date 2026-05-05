@@ -1,5 +1,6 @@
 import React from "react";
 import { Spotlight } from "@/components/ui/Spotlight";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -24,12 +25,16 @@ export default function Hero() {
         </p>
         
         <div className="mt-8 flex justify-center gap-4">
-             <button className="bg-white text-black rounded-full px-8 py-3 font-bold hover:bg-neutral-200 transition">
-               Get Quote
-             </button>
-             <button className="text-white border border-neutral-600 rounded-full px-8 py-3 font-bold hover:bg-neutral-900 transition">
-               Contact Sales
-             </button>
+             <Link href="/contact">
+               <button className="bg-white text-black rounded-full px-8 py-3 font-bold hover:bg-neutral-200 transition">
+                 Get Quote
+               </button>
+             </Link>
+             <Link href="/contact">
+               <button className="text-white border border-neutral-600 rounded-full px-8 py-3 font-bold hover:bg-neutral-900 transition">
+                 Contact Sales
+               </button>
+             </Link>
         </div>
       </div>
     </div>
