@@ -18,7 +18,6 @@ export default function Navbar() {
   const router = useRouter();
 
   const navItems = [
-    { name: "Home", link: "/" },
     { name: "Services", link: "/services" },
     { name: "Sourcing", link: "/sourcing" },
     { name: "About", link: "/about" },
@@ -45,10 +44,10 @@ export default function Navbar() {
 
         {/* Mobile Toggle (Hidden on Desktop) */}
         <div className="md:hidden">
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
+          <MobileNavToggle
+            isOpen={isMobileMenuOpen}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          />
         </div>
       </NavBody>
 
