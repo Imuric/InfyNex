@@ -1,8 +1,49 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus("idle");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-black">
       <Navbar />
@@ -63,25 +104,68 @@ export default function Contact() {
           </div>
           
           <div className="bg-neutral-950 border border-neutral-800 p-8 rounded-2xl">
-            <form className="flex flex-col gap-6">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <div className="flex flex-col gap-2">
                 <label className="text-neutral-400 text-sm">Full Name</label>
-                <input type="text" className="bg-black border border-neutral-800 rounded-lg p-3 text-white focus:outline-none focus:border-neutral-500 transition" placeholder="John Doe" />
+                <input 
+                  type="text" 
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="bg-black border border-neutral-800 rounded-lg p-3 text-white focus:outline-none focus:border-neutral-500 transition" 
+                  placeholder="John Doe" 
+                />
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-neutral-400 text-sm">Email Address</label>
-                <input type="email" className="bg-black border border-neutral-800 rounded-lg p-3 text-white focus:outline-none focus:border-neutral-500 transition" placeholder="john@example.com" />
+                <input 
+                  type="email" 
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="bg-black border border-neutral-800 rounded-lg p-3 text-white focus:outline-none focus:border-neutral-500 transition" 
+                  placeholder="john@example.com" 
+                />
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-neutral-400 text-sm">Phone Number</label>
-                <input type="tel" className="bg-black border border-neutral-800 rounded-lg p-3 text-white focus:outline-none focus:border-neutral-500 transition" placeholder="+91 73784 77700" />
+                <input 
+                  type="tel" 
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="bg-black border border-neutral-800 rounded-lg p-3 text-white focus:outline-none focus:border-neutral-500 transition" 
+                  placeholder="+91 73784 77700" 
+                />
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-neutral-400 text-sm">Message</label>
-                <textarea rows={4} className="bg-black border border-neutral-800 rounded-lg p-3 text-white focus:outline-none focus:border-neutral-500 transition" placeholder="How can we help you?"></textarea>
+                <textarea 
+                  rows={4} 
+                  name="message"
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="bg-black border border-neutral-800 rounded-lg p-3 text-white focus:outline-none focus:border-neutral-500 transition" 
+                  placeholder="How can we help you?"
+                ></textarea>
               </div>
-              <button type="button" className="bg-white text-black rounded-lg px-8 py-3 font-bold hover:bg-neutral-200 transition mt-2">
-                Send Message
+              
+              {status === "success" && (
+                <p className="text-green-500 text-sm">Your message has been sent successfully.</p>
+              )}
+              {status === "error" && (
+                <p className="text-red-500 text-sm">Something went wrong. Please try again.</p>
+              )}
+
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="bg-white text-black rounded-lg px-8 py-3 font-bold hover:bg-neutral-200 transition mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
