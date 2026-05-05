@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-export const dynamic = 'force-dynamic';
-
 export async function GET() {
   return NextResponse.json({ message: "Contact API is reachable" }, { status: 200 });
 }
